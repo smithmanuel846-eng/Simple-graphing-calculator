@@ -1,0 +1,168 @@
+package Graphing_Calculator;
+
+import java.util.ArrayList;
+
+public class Solver {
+
+    //No constructor needed, All methods will be static
+
+
+    //Simple functions
+    public static ArrayList simpleLinear(String equ)
+    {
+        ArrayList<Double> points = new ArrayList<Double>();
+        double x = -100;
+        double y = 0;
+        while (x <=100)
+            {
+                y = x;
+                points.add(x);
+                points.add(y);
+                x++;
+
+            }
+
+            return points;
+
+    }
+
+    public static ArrayList simplequad(String equ)
+    {
+        ArrayList<Double> points = new ArrayList<Double>();
+        double x = -100;
+        double y = 0;
+        while(x <= 100)
+            {
+
+                y = Math.pow(x,2);
+                
+                points.add(x);
+                points.add(y);
+                
+                x = x + 0.01;
+               
+
+            }
+           
+            return points;
+    }
+
+     public static ArrayList simplecube(String equ)
+    {
+        ArrayList<Double> points = new ArrayList<Double>();
+        double x = -100;
+        double y = 0;
+        while(x <= 100)
+            {
+
+                y = Math.pow(x,3);
+                
+                points.add(x);
+                points.add(y);
+                
+                x = x + 0.01;
+               
+
+            }
+           
+            return points;
+    }
+
+
+    public static ArrayList simplesin(String equ)
+    {
+        ArrayList<Double> points = new ArrayList<Double>();
+        double x = -100;
+        double y = 0;
+        while(x <= 100)
+            {
+
+                y = Math.sin(x);
+                
+                points.add(x);
+                points.add(y);
+                
+                x = x + 0.01;
+               
+
+            }
+           
+            return points;
+    }
+
+    public static ArrayList simplecos(String equ)
+    {
+        ArrayList<Double> points = new ArrayList<Double>();
+        double x = -100;
+        double y = 0;
+        while(x <= 100)
+            {
+
+                y = Math.cos(x);
+                
+                points.add(x);
+                points.add(y);
+                
+                x = x + 0.01;
+               
+
+            }
+           
+            return points;
+    }
+
+
+    public static ArrayList simpletan(String equ)
+    {
+        ArrayList<Double> points = new ArrayList<Double>();
+        double x = -100;
+        double y = 0;
+        while(x <= 100)
+            {
+
+                y = Math.tan(x);
+                
+                points.add(x);
+                points.add(y);
+                
+                x = x + 0.01;
+               
+
+            }
+           
+            return points;
+    }
+
+    public static ArrayList simplesqrt(String equ)
+    {
+        ArrayList<Double> points = new ArrayList<Double>();
+        double x = -100;
+        double y = 0;
+        while(x <= 100)
+            {
+
+                y = Math.sqrt(x);
+                
+                points.add(x);
+                points.add(y);
+                
+                x = x + 0.01;
+               
+
+            }
+           
+            return points;
+    }
+
+    
+
+
+
+
+
+    
+
+
+    
+    
+}
