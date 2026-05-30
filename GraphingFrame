@@ -1,0 +1,23 @@
+package Graphing_Calculator;
+
+import javax.swing.JFrame;
+
+
+public class GraphingFrame extends JFrame {
+
+    MyPanel panel;
+
+public GraphingFrame(){
+
+    panel = new MyPanel();
+ setSize(500,500);
+ add(panel);
+ pack();
+ setLocationRelativeTo(null);
+ setVisible(true);
+
+        
+    
+    
+}
+}
