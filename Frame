@@ -1,0 +1,359 @@
+package Graphing_Calculator;
+
+import javax.swing.*;
+import javax.swing.border.*;
+
+import java.awt.*;
+
+public class Frame extends JFrame {
+
+    //SO MANY BUTTONS 
+    private static JButton one;
+    private static JButton two;
+    private static JButton three;
+    private static JButton four;
+    private static JButton five;
+    private static JButton six;
+    private static JButton seven;
+    private static JButton eight;
+    private static JButton nine;
+    private static JButton zero;
+    private static JButton PLeft;
+    private static JButton PRight;
+    private static JButton sin;
+    private static JButton cos;
+    private static JButton tan;
+    private static JButton plus;
+    private static JButton minus;
+    private static JButton sqrt;
+    private static JButton carrot;
+    private static JButton graph;
+    private static JLabel input = new JLabel();
+    private static JButton clear;
+    private static JButton func;
+    private static JButton equ;
+    private static JButton x;
+    
+    
+
+    public Frame()
+    {
+    //Frame stuff
+        setTitle("Graphing Calculator");
+        setSize(350,475);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setResizable(false);
+        setLocationRelativeTo(rootPane);
+        setVisible(true);
+        setLayout(null);
+        getContentPane().setBackground(new Color(209, 209, 209));
+
+
+
+         input = new JLabel(""); 
+        input.setForeground(Color.BLACK);
+        input.setFont(new Font("Dialog", Font.BOLD, 25));
+        input.setBounds(15, 10, 309, 100);
+        input.setBorder(BorderFactory.createLineBorder(Color.WHITE, 2));
+        add(input);
+
+        //NOTE X distance is 60, Y distance is 55
+        seven = new JButton("7");
+        seven.setForeground(Color.BLACK);
+        seven.setBounds(15,125,55,45);
+        add(seven);
+
+        eight = new JButton("8");
+        eight.setForeground(Color.BLACK);
+        eight.setBounds(75,125,55,45);
+        add(eight);
+
+        nine = new JButton("9");
+        nine.setForeground(Color.BLACK);
+        nine.setBounds(135,125,55,45);
+        add(nine);
+
+        four = new JButton("4");
+        four.setForeground(Color.BLACK);
+        four.setBounds(15,180,55,45);
+        add(four);
+
+        five = new JButton("5");
+        five.setForeground(Color.BLACK);
+        five.setBounds(75,180,55,45);
+        add(five);
+
+        six = new JButton("6");
+        six.setForeground(Color.BLACK);
+        six.setBounds(135,180,55,45);
+        add(six);
+
+        one = new JButton("1");
+        one.setForeground(Color.BLACK);
+        one.setBounds(15,235,55,45);
+        add(one);
+
+        two = new JButton("2");
+        two.setForeground(Color.BLACK);
+        two.setBounds(75,235,55,45);
+        add(two);
+
+        three = new JButton("3");
+        three.setForeground(Color.BLACK);
+        three.setBounds(135,235,55,45);
+        add(three);
+
+        PLeft = new JButton("(");
+        PLeft.setForeground(Color.BLACK);
+        PLeft.setBounds(15,290,55,45);
+        add(PLeft);
+
+        PRight = new JButton(")");
+        PRight.setForeground(Color.BLACK);
+        PRight.setBounds(135,290,55,45);
+        add(PRight);
+        
+        zero = new JButton("0");
+        zero.setForeground(Color.BLACK);
+        zero.setBounds(75,290,55,45);
+        add(zero);
+
+        sin = new JButton("sin");
+        sin.setForeground(Color.BLACK);
+        sin.setBounds(15,345,55,45);
+        add(sin);
+
+        cos = new JButton("cos");
+        cos.setForeground(Color.BLACK);
+        cos.setBounds(75,345,55,45);
+        add(cos);
+
+        tan = new JButton("tan");
+        tan.setForeground(Color.BLACK);
+        tan.setBounds(135,345,55,45);
+        add(tan);
+
+        plus = new JButton("+");
+        plus.setForeground(Color.BLACK);
+        plus.setBounds(195,125,55,45);
+        add(plus);
+
+        minus = new JButton("-");
+        minus.setForeground(Color.BLACK);
+        minus.setBounds(195,180,55,45);
+        add(minus);
+
+        sqrt = new JButton("√");
+        sqrt.setForeground(Color.BLACK);
+        sqrt.setBounds(195,235,55,45);
+        add(sqrt);
+
+        carrot = new JButton("^");
+        carrot.setForeground(Color.BLACK);
+        carrot.setBounds(195,290,55,45);
+        add(carrot);
+
+        graph = new JButton("graph");
+        graph.setForeground(Color.BLACK);
+        graph.setBounds(195,345,110,45);
+        add(graph);
+
+        clear = new JButton("C");
+        clear.setForeground(Color.BLACK);
+        clear.setBounds(255,125,55,45);
+        add(clear);
+
+        func = new JButton("f(x)");
+        func.setForeground(Color.BLACK);
+        func.setBounds(255,180,55,45);
+        add(func);
+
+        equ = new JButton("=");
+        equ.setForeground(Color.BLACK);
+        equ.setBounds(255,235,55,45);
+        add(equ);
+
+        x = new JButton("X");
+        x.setForeground(Color.BLACK);
+        x.setBounds(255,290,55,45);
+        add(x);
+
+        
+
+        
+
+            
+   
+
+        
+    }
+
+    public static String getinput()
+    {
+        return input.getText();
+
+    }
+
+    public static JButton get1()
+    {
+        return one;
+
+    }
+
+     public static JButton get2()
+    {
+        return two;
+
+    }
+
+      public static JButton get3()
+    {
+        return three;
+
+    }
+
+      public static JButton get4()
+    {
+        return four;
+
+    }
+
+      public static JButton get5()
+    {
+        return five;
+
+    }
+
+      public static JButton get6()
+    {
+        return six;
+
+    }
+
+      public static JButton get7()
+    {
+        return seven;
+    }
+
+      public static JButton get8()
+    {
+        return eight;
+
+    }
+
+      public static JButton get9()
+    {
+        return nine;
+
+    }
+
+      public static JButton getzero()
+    {
+        return zero;
+
+    }
+
+      public static JButton getPLeft()
+    {
+        return PLeft;
+
+    }
+
+      public static JButton getPRight()
+    {
+        return PRight;
+
+    }
+
+      public static JButton getsin()
+    {
+        return sin;
+
+    }
+
+      public static JButton getcos()
+    {
+        return cos;
+
+    }
+
+      public static JButton gettan()
+    {
+        return tan;
+
+    }
+
+      public static JButton getplus()
+    {
+        return plus;
+
+    }
+
+      public static JButton getminus()
+    {
+        return  minus;
+
+    }
+
+      public static JButton getsqrt()
+    {
+        return sqrt;
+
+    }
+
+      public static JButton getcarrot()
+    {
+        return carrot;
+
+    }
+
+      public static JButton getfunc()
+    {
+        return func;
+
+    }
+
+      public static JButton getequ()
+    {
+        return equ;
+
+    }
+
+    public static JButton getx()
+    {
+        return x;
+
+    }
+
+    
+
+
+    public static JButton getClear()
+    {
+        return clear;
+
+    }
+
+    public static JButton getGraph()
+    {
+        return graph;
+    }
+
+
+
+
+
+
+    public static void setText(String s)
+    {
+        input.setText(input.getText()+s);
+    }
+
+    public static void clearText()
+    {
+        input.setText("");
+
+    }
+    
+}
+  
