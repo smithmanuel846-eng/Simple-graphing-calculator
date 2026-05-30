@@ -1,0 +1,218 @@
+package Graphing_Calculator;
+
+import javax.swing.SwingUtilities;
+import java.util.ArrayList;
+
+
+public class CalculatorRunner {
+    
+    public static void main(String [] args){
+        
+
+
+    SwingUtilities.invokeLater(new Runnable() {
+        @Override
+
+        public void run() {
+            Frame frame = new Frame();
+
+            Frame.get1().addActionListener(e -> {
+
+                Frame.setText("1");
+            });
+
+             Frame.get2().addActionListener(e -> {
+
+                Frame.setText("2");
+            });
+
+             Frame.get3().addActionListener(e -> {
+
+                Frame.setText("3");
+            });
+
+             Frame.get4().addActionListener(e -> {
+
+                Frame.setText("4");
+            });
+
+             Frame.get5().addActionListener(e -> {
+
+                Frame.setText("5");
+
+             });
+             
+              Frame.get6().addActionListener(e -> {
+
+                Frame.setText("6");
+            });
+
+              Frame.get7().addActionListener(e -> {
+
+                Frame.setText("7");
+            });
+
+              Frame.get8().addActionListener(e -> {
+
+                Frame.setText("8");
+            });
+
+              Frame.get9().addActionListener(e -> {
+
+                Frame.setText("9");
+            });
+
+              Frame.getzero().addActionListener(e -> {
+
+                Frame.setText("0");
+            });
+
+              Frame.getPLeft().addActionListener(e -> {
+
+                Frame.setText("(");
+            });
+
+              Frame.getPRight().addActionListener(e -> {
+
+                Frame.setText(")");
+            });
+
+              Frame.getsin().addActionListener(e -> {
+
+                Frame.setText("sin");
+            });
+
+              Frame.getcos().addActionListener(e -> {
+
+                Frame.setText("cos");
+            });
+
+              Frame.gettan().addActionListener(e -> {
+
+                Frame.setText("tan");
+            });
+
+              Frame.getplus().addActionListener(e -> {
+
+                Frame.setText("+");
+            });
+
+              Frame.getminus().addActionListener(e -> {
+
+                Frame.setText("-");
+            });
+
+              Frame.getsqrt().addActionListener(e -> {
+
+                Frame.setText("√");
+            });
+
+            Frame.getcarrot().addActionListener(e -> {
+
+                Frame.setText("^");
+            });
+
+            Frame.getfunc().addActionListener(e -> {
+
+                Frame.setText("f(x)");
+            });
+
+            Frame.getequ().addActionListener(e -> {
+
+                Frame.setText("=");
+            });
+
+            Frame.getx().addActionListener(e -> {
+
+                Frame.setText("X");
+            });
+
+
+           
+           
+            Frame.getClear().addActionListener(e -> {
+                Frame.clearText();
+            });
+
+
+            //MOST IMPORTANT LISTENER
+            Frame.getGraph().addActionListener(e -> {
+
+             String equation = Frame.getinput();
+             if (equation.equals("f(x)=X"))
+              {
+         
+                 ArrayList<Double> points = new ArrayList<Double>();
+                 points = Solver.simpleLinear(equation);
+                 MyPanel.setList(points);
+                new GraphingFrame();
+
+         
+
+                } else if (equation.equals("f(x)=X^2"))
+                {
+               
+                ArrayList<Double> points = new ArrayList<Double>();
+                points = Solver.simplequad(equation);
+                MyPanel.setList(points);
+                new GraphingFrame();
+                
+
+            } else if (equation.equals("f(x)=X^3"))
+                {
+                        ArrayList<Double> points = new ArrayList<Double>();
+                points = Solver.simplecube(equation);
+                MyPanel.setList(points);
+                new GraphingFrame(); 
+                } else if (equation.equals("f(x)=sin(X)"))
+                {
+                        ArrayList<Double> points = new ArrayList<Double>();
+                points = Solver.simplesin(equation);
+                MyPanel.setList(points);
+                new GraphingFrame(); 
+                } else if (equation.equals("f(x)=cos(X)"))
+                {
+                        ArrayList<Double> points = new ArrayList<Double>();
+                points = Solver.simplecos(equation);
+                MyPanel.setList(points);
+                new GraphingFrame(); 
+                } else if (equation.equals("f(x)=tan(X)"))
+                {
+                        ArrayList<Double> points = new ArrayList<Double>();
+                points = Solver.simpletan(equation);
+                MyPanel.setList(points);
+                new GraphingFrame(); 
+                } else if (equation.equals("f(x)=√X"))
+                {
+                        ArrayList<Double> points = new ArrayList<Double>();
+                points = Solver.simplesqrt(equation);
+                MyPanel.setList(points);
+                new GraphingFrame(); 
+                } 
+
+
+
+            });
+
+            //end of invoke later block
+        }
+
+
+    });
+
+
+   
+
+ 
+
+        
+       
+   
+
+
+
+}
+
+
+
+}
